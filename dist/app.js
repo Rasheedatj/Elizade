@@ -2,6 +2,7 @@ const menuBtn = document.querySelector('.menuBtn');
 const info = document.querySelector('.info');
 const contact = document.querySelector('.contact');
 const close = document.querySelector('#close-contact-info');
+backToTop = document.querySelector('.back_to_top');
 
 function openMenu() {
   menuBtn.classList.toggle('active');
@@ -12,13 +13,13 @@ menuBtn.addEventListener('click', openMenu);
 
 window.onscroll = () => {
   document.querySelector('header').classList.add('active');
-  document.querySelector('.back_to_top').classList.add('active');
+  backToTop.classList.add('active');
 };
 
 window.addEventListener('scroll', () => {
   if (document.documentElement.scrollTop === 0) {
     document.querySelector('header').classList.remove('active');
-    document.querySelector('.back_to_top').classList.remove('active');
+    backToTop.classList.remove('active');
   }
 });
 

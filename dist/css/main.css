@@ -76,6 +76,7 @@ header nav ul a:hover {
 }
 header nav ul .administration {
   position: relative;
+  height: 4rem;
 }
 header nav ul .administration:hover span {
   display: block;
@@ -84,7 +85,7 @@ header nav ul .administration span {
   position: absolute;
   width: 220%;
   background-color: white;
-  top: 250%;
+  top: 100%;
   right: 0%;
   animation: slideUp 500ms ease;
   display: none;
@@ -275,7 +276,7 @@ header.active {
 }
 
 .body {
-  padding: 6.7rem 0;
+  padding-top: 6.7rem;
 }
 
 .hero {
@@ -382,6 +383,146 @@ header.active {
 }
 .hero .swiper-button-prev {
   right: 4rem;
+}
+
+.part2 {
+  padding: 5rem 3rem;
+}
+@media (max-width: 420px) {
+  .part2 {
+    padding: 5rem 1.5rem;
+  }
+}
+.part2 .mission {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+@media (max-width: 420px) {
+  .part2 .mission {
+    flex-direction: column;
+  }
+}
+.part2 .mission > div {
+  background-color: #eee;
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 50%;
+}
+@media (max-width: 420px) {
+  .part2 .mission > div {
+    width: 100%;
+  }
+}
+.part2 .mission > div .top_img {
+  background-color: #0796fe;
+  color: white;
+  align-self: flex-start;
+  width: 15%;
+  padding: 15px;
+  display: grid;
+  place-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.part2 .mission > div .top_img i {
+  font-size: 1.5rem;
+}
+.part2 .mission > div h3 {
+  padding-top: 1.3rem;
+  padding-bottom: 0.7rem;
+  text-transform: capitalize;
+  color: #092a49;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.part2 .mission > div p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 18px;
+  padding-bottom: 1rem;
+}
+.part2 .about {
+  padding-top: 7rem;
+}
+.part2 .about h3 {
+  text-transform: capitalize;
+  color: #092a49;
+  font-weight: 500;
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+}
+.part2 .about > div {
+  display: flex;
+  align-items: start;
+  gap: 5rem;
+  justify-content: space-between;
+}
+@media (max-width: 420px) {
+  .part2 .about > div {
+    flex-direction: column-reverse;
+  }
+}
+.part2 .about > div .describe {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media (max-width: 420px) {
+  .part2 .about > div .describe {
+    width: 100%;
+    gap: 1.5rem;
+  }
+}
+.part2 .about > div .describe p {
+  color: #666;
+  font-size: 20px;
+  line-height: 2;
+}
+.part2 .about > div .describe .btn {
+  text-decoration: none;
+  padding: 20px;
+  width: 22%;
+  text-align: center;
+  color: #092a49;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  border: 2px solid #092a49;
+  background-color: white;
+}
+@media (max-width: 420px) {
+  .part2 .about > div .describe .btn {
+    width: 50%;
+  }
+}
+.part2 .about > div .describe .btn:hover {
+  scale: 1.06;
+}
+.part2 .about > div .video {
+  width: 40%;
+  position: relative;
+}
+@media (max-width: 420px) {
+  .part2 .about > div .video {
+    width: 90%;
+  }
+}
+@media (max-width: 420px) {
+  .part2 .about > div .video iframe {
+    width: 320px;
+    height: 200px;
+  }
+}
+.part2 .about > div .video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #092a49;
+  z-index: -1;
+  transform: translate(15px, 15px);
 }
 
 .back_to_top.active {
