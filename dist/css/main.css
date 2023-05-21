@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all 250ms ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes contactFade {
+  0% {
+    right: -50%;
+    opacity: 0;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+header .logo {
+  width: 40%;
+}
+header nav {
+  width: 50%;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+header nav ul .withCaret {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+header nav ul .withCaret:hover {
+  color: #0796fe;
+}
+header nav ul a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #111;
+  font-weight: 400;
+  font-size: 17px;
+  transition: all 400ms ease;
+}
+header nav ul a:hover {
+  color: #0796fe;
+}
+header nav ul .administration {
+  position: relative;
+}
+header nav ul .administration:hover span {
+  display: block;
+}
+header nav ul .administration span {
+  position: absolute;
+  width: 220%;
+  background-color: white;
+  top: 250%;
+  right: 0%;
+  animation: slideUp 500ms ease;
+  display: none;
+}
+header nav ul .administration span ul {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+header nav ul .administration span ul li {
+  padding: 20px;
+  width: 100%;
+  text-align: start;
+  border-bottom: 2px solid #eee;
+  display: flex;
+  gap: 20px;
+  line-height: 30px;
+}
+header nav ul .administration span ul li:hover {
+  background-color: #eee;
+}
+header nav ul .administration span ul::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #0796fe;
+  top: 0;
+  right: 0;
+  transform: translateY(-98%);
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+header nav ul .faculty span {
+  width: 500%;
+}
+@media (max-width: 420px) {
+  header nav {
+    display: none;
+  }
+}
+header .info .fa-info-circle {
+  background-color: #eee;
+  padding: 13px 15px;
+  color: #092a49;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+}
+header .info .fa-info-circle:hover {
+  background-color: #092a49;
+  color: white;
+}
+header .menuBtn {
+  flex-direction: column;
+  gap: 5px;
+  display: none;
+}
+header .menuBtn span {
+  background-color: #092a49;
+  width: 30px;
+  height: 2px;
+}
+header .menuBtn span:nth-child(2) {
+  width: 25px;
+}
+header .menuBtn span:nth-child(3) {
+  width: 20px;
+}
+@media (max-width: 420px) {
+  header .menuBtn {
+    display: flex;
+  }
+}
+header .menuBtn.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+header .menuBtn.active span:nth-child(2) {
+  width: 30px;
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+header .menuBtn.active span:nth-child(3) {
+  display: none;
+}
+@media (max-width: 420px) {
+  header {
+    padding: 1rem 2rem;
+  }
+}
+
+.contact {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 30%;
+  background-color: white;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+  padding-top: 3rem;
+  display: none;
+}
+@media (max-width: 420px) {
+  .contact {
+    width: 90%;
+  }
+}
+.contact .fa-times {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.contact .fa-times:hover {
+  scale: 1.2;
+}
+.contact .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.contact .info i {
+  font-size: 1.5rem;
+  background-color: #eee;
+  padding: 13px 15px;
+}
+.contact .info i:hover {
+  background-color: #092a49;
+  cursor: pointer;
+  color: white;
+}
+.contact .info h3 {
+  text-transform: capitalize;
+}
+.contact .share {
+  display: flex;
+  gap: 0.5rem;
+}
+.contact .share a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  background-color: #eee;
+  padding: 13px 15px;
+  margin-bottom: 0.5rem;
+  color: #092a49;
+}
+.contact .share a:hover {
+  background-color: #092a49;
+  cursor: pointer;
+  color: white;
+}
+.contact .line {
+  width: 90%;
+  height: 2px;
+  background: #eee;
+}
+
+.contact.open {
+  display: flex;
+  animation: 500ms contactFade linear;
+}
+
+header.active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.back_to_top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #092a49;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transform: translateY(250%);
+  transition: transform 300ms ease-in;
+}
+.back_to_top i {
+  color: white;
+  font-size: 20px;
+}
+
+.body {
+  padding: 6.7rem 0;
+}
+
+.hero {
+  width: 100%;
+  padding: 0;
+}
+.hero .slide {
+  min-height: 30rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+  justify-content: center;
+}
+.hero .slide::before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #eee, transparent);
+  position: absolute;
+}
+.hero .slide .content {
+  width: 80%;
+  position: relative;
+  text-align: center;
+  color: #111;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-self: center;
+}
+.hero .slide .content h3 {
+  font-size: 3rem;
+  color: #092a49;
+  text-transform: uppercase;
+}
+@media (max-width: 420px) {
+  .hero .slide .content h3 {
+    font-size: 1.5rem;
+  }
+}
+.hero .slide .content p {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 2;
+  padding-block: 1rem;
+  width: 60%;
+  font-size: 20px;
+}
+@media (max-width: 420px) {
+  .hero .slide .content p {
+    font-size: 16px;
+    width: 100%;
+    line-height: 1.7;
+    padding-block: 0.5rem;
+  }
+}
+.hero .slide .content .btn {
+  padding: 20px;
+  width: 15%;
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  background-color: #092a49;
+  word-spacing: 0.6rem;
+}
+.hero .slide .content .btn:hover {
+  background-color: white;
+  color: #092a49;
+}
+@media (max-width: 420px) {
+  .hero .slide .content .btn {
+    width: auto;
+  }
+}
+.hero .swiper-button-next,
+.hero .swiper-button-prev {
+  top: initial;
+  bottom: 0;
+  left: initial;
+  right: 0;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  font-size: 3rem;
+  color: white;
+  background-color: #0796fe;
+  font-weight: bolder;
+}
+.hero .swiper-button-next:hover,
+.hero .swiper-button-prev:hover {
+  background-color: white;
+  color: #0796fe;
+}
+.hero .swiper-button-next::after,
+.hero .swiper-button-prev::after {
+  color: var(--black);
+  font-size: 1.3rem;
+}
+.hero .swiper-button-prev {
+  right: 4rem;
+}
+
+.back_to_top.active {
+  transform: translateY(0);
+}/*# sourceMappingURL=main.css.map */

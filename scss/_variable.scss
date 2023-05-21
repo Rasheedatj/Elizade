@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,700&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all 250ms ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+$primaryColor: #092a49;
+$white: white;
+$gray: #eee;
+$darkGray: #333333;
+$primaryAccent: #0796fe;
+$text: #666;
+$lightBlue: #0796fe;
+$black: #111;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+$font-weights: (
+  'regular': 300,
+  'medium': 400,
+  'bold': 600,
+);
+
+$mobile: 420px;
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes contactFade {
+  0% {
+    right: -50%;
+    opacity: 0;
+  }
+}
