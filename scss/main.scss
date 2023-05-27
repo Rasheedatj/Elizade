@@ -690,6 +690,24 @@ header.active {
   }
 }
 
+.offer {
+  padding: 3rem 5%;
+
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: $white;
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
+    text-align: center;
+
+    @include mobile {
+      font-size: 1.4rem;
+    }
+  }
+}
+
 .attraction .box:hover i {
   transform: translateY(-1rem);
   cursor: pointer;
