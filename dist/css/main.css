@@ -32,7 +32,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  padding: 1rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   justify-content: space-between;
   background-color: white;
   position: fixed;
@@ -350,7 +350,7 @@ header.active {
 }
 .hero .slide .content .btn:hover {
   background-color: white;
-  color: #092a49;
+  color: #0796fe;
 }
 @media (max-width: 420px) {
   .hero .slide .content .btn {
@@ -368,7 +368,7 @@ header.active {
   line-height: 4rem;
   font-size: 3rem;
   color: white;
-  background-color: #0796fe;
+  background-color: #092a49;
   font-weight: bolder;
 }
 .hero .swiper-button-next:hover,
@@ -382,7 +382,7 @@ header.active {
   font-size: 1.3rem;
 }
 .hero .swiper-button-prev {
-  right: 4rem;
+  right: 4.1rem;
 }
 
 .part2 {
@@ -523,6 +523,135 @@ header.active {
   border: 2px solid #092a49;
   z-index: -1;
   transform: translate(15px, 15px);
+}
+
+.faculties {
+  padding: 5rem 5rem;
+  padding-bottom: 2rem;
+  background-color: #092a49;
+}
+@media (max-width: 420px) {
+  .faculties {
+    padding: 1.5rem;
+  }
+}
+.faculties h3 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+@media (max-width: 420px) {
+  .faculties h3 {
+    font-size: 1.4rem;
+  }
+}
+.faculties .fac {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 5rem;
+}
+@media (max-width: 420px) {
+  .faculties .fac {
+    flex-direction: column;
+    gap: 0rem;
+    padding-left: 2rem;
+  }
+}
+.faculties .fac > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: white;
+  gap: 2rem;
+}
+@media (max-width: 420px) {
+  .faculties .fac > div {
+    justify-content: start;
+    align-items: start;
+  }
+}
+.faculties .fac > div .icon {
+  color: #0796fe;
+  background-color: white;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5em;
+  align-self: flex-start;
+}
+.faculties .fac > div ul {
+  list-style: none;
+}
+.faculties .fac > div ul li {
+  line-height: 2;
+  font-size: 16px;
+  position: relative;
+}
+.faculties .fac > div ul li::before {
+  position: absolute;
+  left: -2.3rem;
+  font-family: "Font Awesome 5 Free";
+  content: "\f178";
+  font-weight: 900;
+}
+
+.attraction {
+  background: #eee;
+  padding: 3rem 5%;
+}
+.attraction h3 {
+  text-transform: uppercase;
+  color: #092a49;
+  font-weight: 500;
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+.attraction .box-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+.attraction .box-container .box {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.attraction .box-container .box i {
+  font-size: 2rem;
+  color: #0796fe;
+  margin-bottom: 0.3rem;
+  transition: all 500ms ease;
+}
+.attraction .box-container .box h3 {
+  font-size: 1.2rem;
+  color: #092a49;
+  text-transform: uppercase;
+  padding-block: 0.8rem;
+  padding-bottom: 1rem;
+}
+.attraction .box-container .box p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+.attraction .box:hover i {
+  transform: translateY(-1rem);
+  cursor: pointer;
 }
 
 .back_to_top.active {

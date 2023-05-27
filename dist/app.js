@@ -33,7 +33,7 @@ close.addEventListener('click', () => {
 
 var swiper = new Swiper('.home-slider', {
   loop: true,
-  grabCursor: true,
+  effect: 'fade',
   autoplay: {
     delay: 3500,
     disableOnInteraction: false,
@@ -43,3 +43,22 @@ var swiper = new Swiper('.home-slider', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+// faculties swiper
+
+// var swiper = new Swiper('.mySwiper', {
+//   effect: 'coverflow',
+//   grabCursor: true,
+//   centeredSlides: true,
+//   slidesPerView: 5,
+//   coverflowEffect: {
+//     rotate: 50,
+//     stretch: 0,
+//     depth: 100,
+//     modifier: 1,
+//     slideShadows: true,
+//   },
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+// });
