@@ -30,9 +30,15 @@ $font-weights: (
 );
 
 $mobile: 420px;
+$tablet: 900px;
 
 @mixin mobile {
   @media (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $tablet) {
     @content;
   }
 }
