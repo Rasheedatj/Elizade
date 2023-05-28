@@ -275,7 +275,7 @@ header.active {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: $primaryColor;
+  background-color: $lightBlue;
   border-radius: 5px;
   padding: 10px 15px;
   cursor: pointer;
@@ -472,6 +472,10 @@ header.active {
       font-weight: 500;
       font-size: 2.5rem;
       padding-bottom: 3rem;
+
+      @include mobile {
+        font-size: 2rem;
+      }
     }
 
     & > div {
@@ -649,6 +653,10 @@ header.active {
     font-size: 2.5rem;
     padding-bottom: 3rem;
     text-align: center;
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
   }
 
   .box-container {
@@ -716,13 +724,111 @@ header.active {
 
     & > div {
       background-color: $light-bg;
-      width: 25%;
+      width: 100%;
       text-align: center;
       padding: 3rem 2rem;
 
       font-size: 1.3rem;
       text-transform: capitalize;
       color: $primaryColor;
+    }
+  }
+}
+
+footer {
+  background-color: $primaryColor;
+  padding: 5em 2.5em;
+  padding-bottom: 3em;
+  padding-right: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @include mobile {
+    padding-right: 2.5rem;
+  }
+
+  .box_one {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    & > div {
+      color: $white;
+
+      h4 {
+        text-transform: capitalize;
+        font-size: 1.3rem;
+        letter-spacing: 0.7px;
+        font-weight: normal;
+        margin-bottom: 1.7rem;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 1.5rem;
+
+        li {
+          font-size: 1rem;
+          font-weight: normal;
+          text-transform: capitalize;
+          letter-spacing: 0.5px;
+          margin-block: 0.7em;
+          cursor: pointer;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            left: -1.5rem;
+            font-family: 'Font Awesome 5 Free';
+            content: '\f105';
+            font-weight: 900;
+          }
+
+          &:hover {
+            color: $lightBlue;
+            transform: scaleX(1.1);
+            transform-origin: left center;
+          }
+        }
+      }
+    }
+  }
+
+  .box_two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      gap: 2rem;
+    }
+
+    p {
+      color: $lightBlue;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+
+    .icons {
+      display: flex;
+      gap: 1rem;
+      a {
+        color: $lightBlue;
+        text-decoration: none;
+        font-size: 30px;
+
+        &:hover {
+          color: $white;
+        }
+      }
     }
   }
 }
