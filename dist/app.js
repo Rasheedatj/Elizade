@@ -35,7 +35,7 @@ var swiper = new Swiper('.home-slider', {
   loop: true,
   effect: 'fade',
   autoplay: {
-    delay: 3500,
+    delay: 5500,
     disableOnInteraction: false,
   },
   navigation: {

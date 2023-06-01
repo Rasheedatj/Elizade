@@ -304,6 +304,7 @@ header.active {
     background-size: cover !important;
     background-position: center !important;
     justify-content: center;
+    background-blend-mode: overlay;
 
     &::before {
       content: '';
@@ -329,6 +330,7 @@ header.active {
         font-size: 3rem;
         color: $primaryColor;
         text-transform: uppercase;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 
         @include mobile {
           font-size: 1.5rem;
@@ -840,4 +842,97 @@ footer {
 
 .back_to_top.active {
   transform: translateY(0);
+}
+
+.founder_body {
+  padding: 7rem 3rem;
+
+  p {
+    font-size: 1rem;
+    color: $text;
+    padding-block: 1rem;
+    width: 80%;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 2rem;
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    .gallery {
+      width: 100%;
+
+      div {
+        display: flex;
+        justify-content: end;
+        position: relative;
+        img {
+          width: 75%;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 75%;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          border: 2px solid $primaryColor;
+          z-index: -1;
+          transform: translate(15px, 15px);
+        }
+      }
+    }
+
+    .title {
+      width: 100%;
+
+      h1 {
+        color: $primaryColor;
+        // width: 70%;
+        font-size: 3rem;
+        color: $primaryColor;
+        text-transform: capitalize;
+        line-height: 0.7;
+
+        span {
+          color: $text;
+          font-size: 1.5rem;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .story {
+    margin-top: 8rem;
+    h2 {
+      color: $primaryColor;
+      font-size: 2rem;
+      color: $primaryColor;
+      text-transform: capitalize;
+      line-height: 0.7;
+      // padding-bottom: 2rem;
+    }
+
+    .box_1 {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+
+      & > * {
+        width: 100%;
+      }
+
+      .img {
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
 }
