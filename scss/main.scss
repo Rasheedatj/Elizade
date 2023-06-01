@@ -50,12 +50,11 @@ header {
         text-transform: capitalize;
         color: $black;
         font-weight: 400;
-        font-size: 17px;
+        font-size: 15px;
         transition: all 400ms ease;
 
         &:hover {
           color: $lightBlue;
-          // transform: translateX(-50px);
         }
       }
 
@@ -572,11 +571,15 @@ nav ul a.active {
           content: '';
           position: absolute;
           inset: 0;
-          width: 320px;
-          height: 200px;
+
           border: 2px solid $primaryColor;
           z-index: -1;
           transform: translate(15px, 15px);
+
+          @include mobile {
+            width: 320px;
+            height: 200px;
+          }
         }
       }
     }
@@ -890,11 +893,10 @@ footer {
     padding: 7rem 1.5rem;
   }
   p {
-    font-size: 1rem;
     color: $text;
     width: 80%;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 17px;
+    line-height: 28px;
     margin-top: 2rem;
 
     @include tablet {
@@ -971,16 +973,17 @@ footer {
           line-height: 45px;
           text-align: center;
         }
+      }
+      span {
+        color: $text;
+        font-size: 1.5rem;
+        font-weight: normal;
+        padding-top: 1rem;
+        display: block;
 
-        span {
-          color: $text;
-          font-size: 1.5rem;
-          font-weight: normal;
-
-          @include tablet {
-            display: block;
-            font-size: 20px;
-          }
+        @include tablet {
+          display: block;
+          font-size: 20px;
         }
       }
     }

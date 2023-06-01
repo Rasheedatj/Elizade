@@ -73,7 +73,7 @@ header nav ul a {
   text-transform: capitalize;
   color: #111;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 15px;
   transition: all 400ms ease;
 }
 header nav ul a:hover {
@@ -559,11 +559,15 @@ nav ul a.active {
   content: "";
   position: absolute;
   inset: 0;
-  width: 320px;
-  height: 200px;
   border: 2px solid #092a49;
   z-index: -1;
   transform: translate(15px, 15px);
+}
+@media (max-width: 420px) {
+  .part2 .about > div .video::before {
+    width: 320px;
+    height: 200px;
+  }
 }
 
 .faculties {
@@ -853,11 +857,10 @@ footer .box_two .icons a:hover {
   }
 }
 .founder_body p {
-  font-size: 1rem;
   color: #666;
   width: 80%;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 17px;
+  line-height: 28px;
   margin-top: 2rem;
 }
 @media (max-width: 900px) {
@@ -937,13 +940,15 @@ footer .box_two .icons a:hover {
     text-align: center;
   }
 }
-.founder_body .head .title h1 span {
+.founder_body .head .title span {
   color: #666;
   font-size: 1.5rem;
   font-weight: normal;
+  padding-top: 1rem;
+  display: block;
 }
 @media (max-width: 900px) {
-  .founder_body .head .title h1 span {
+  .founder_body .head .title span {
     display: block;
     font-size: 20px;
   }
