@@ -354,7 +354,7 @@ nav ul a.active {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 
         @include tablet {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
         }
       }
 
@@ -366,7 +366,7 @@ nav ul a.active {
         font-size: 17px;
 
         @include tablet {
-          font-size: 16px;
+          font-size: 14px;
           width: 100%;
           line-height: 1.7;
           padding-block: 0.5rem;
@@ -558,9 +558,11 @@ nav ul a.active {
         margin-inline: auto;
 
         @include mobile {
-          width: 90%;
+          width: 100%;
         }
+
         iframe {
+          width: 100%;
           @include tablet {
             width: 320px;
             height: 200px;
@@ -613,7 +615,7 @@ nav ul a.active {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
 
     @include tablet {
       flex-direction: column;
@@ -634,6 +636,7 @@ nav ul a.active {
       @include tablet {
         justify-content: start;
         align-items: start;
+        width: 100%;
       }
 
       .icon {
@@ -977,11 +980,12 @@ footer {
         font-size: 1.5rem;
         font-weight: normal;
         padding-top: 1rem;
-        display: block;
 
         @include tablet {
           display: block;
           font-size: 20px;
+          text-align: center;
+          padding-top: 0.5rem;
         }
       }
     }

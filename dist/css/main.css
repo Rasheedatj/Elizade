@@ -347,7 +347,7 @@ nav ul a.active {
 }
 @media (max-width: 900px) {
   .hero .slide .content h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 .hero .slide .content p {
@@ -359,7 +359,7 @@ nav ul a.active {
 }
 @media (max-width: 900px) {
   .hero .slide .content p {
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
     line-height: 1.7;
     padding-block: 0.5rem;
@@ -545,8 +545,11 @@ nav ul a.active {
 }
 @media (max-width: 420px) {
   .part2 .about > div .video {
-    width: 90%;
+    width: 100%;
   }
+}
+.part2 .about > div .video iframe {
+  width: 100%;
 }
 @media (max-width: 900px) {
   .part2 .about > div .video iframe {
@@ -599,7 +602,7 @@ nav ul a.active {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 @media (max-width: 900px) {
   .faculties .fac {
@@ -622,6 +625,7 @@ nav ul a.active {
   .faculties .fac > div {
     justify-content: start;
     align-items: start;
+    width: 100%;
   }
 }
 .faculties .fac > div .icon {
@@ -944,12 +948,13 @@ footer .box_two .icons a:hover {
   font-size: 1.5rem;
   font-weight: normal;
   padding-top: 1rem;
-  display: block;
 }
 @media (max-width: 900px) {
   .founder_body .head .title span {
     display: block;
     font-size: 20px;
+    text-align: center;
+    padding-top: 0.5rem;
   }
 }
 .founder_body .story {
