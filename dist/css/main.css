@@ -303,7 +303,7 @@ nav ul a.active {
 }
 
 .home_body .body {
-  padding-top: 6.7rem;
+  padding-top: 6rem;
 }
 .home_body .hero {
   width: 100%;
@@ -930,13 +930,13 @@ footer .box_two .icons a:hover {
 }
 .founder_body .head .title span {
   color: #666;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: normal;
-  padding-top: 1rem;
+  display: block;
+  padding-top: 0.8rem;
 }
 @media (max-width: 920px) {
   .founder_body .head .title span {
-    display: block;
     font-size: 20px;
     text-align: center;
     padding-top: 0.5rem;
