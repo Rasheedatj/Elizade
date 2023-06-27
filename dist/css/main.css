@@ -316,9 +316,6 @@ nav ul a.active {
 .ham__menu div > ul a:hover {
   color: #0796fe;
 }
-.ham__menu div > ul .withCaret .fa {
-  color: #0796fe;
-}
 .ham__menu div > ul .withCaret span {
   display: block;
   margin-left: 2rem;
@@ -354,6 +351,10 @@ nav ul a.active {
 .ham__menu div > ul .withCaret.open span {
   height: 200px;
   overflow: hidden;
+}
+
+.withCaret.open > .fa {
+  color: #0796fe;
 }
 
 .back_to_top {
@@ -414,6 +415,7 @@ nav ul a.active {
 @media (max-width: 420px) {
   .home_body .hero .slide .content {
     width: 100%;
+    padding-inline: 2rem;
   }
 }
 .home_body .hero .slide .content h3 {

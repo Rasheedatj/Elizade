@@ -326,9 +326,9 @@ nav ul a.active {
       }
 
       .withCaret {
-        .fa {
-          color: $primaryAccent;
-        }
+        // .fa {
+        //   color: $primaryAccent;
+        // }
         span {
           display: block;
           margin-left: 2rem;
@@ -371,6 +371,10 @@ nav ul a.active {
 .ham__menu div > ul .withCaret.open span {
   height: 200px;
   overflow: hidden;
+}
+
+.withCaret.open > .fa {
+  color: $primaryAccent;
 }
 
 .back_to_top {
@@ -431,6 +435,7 @@ nav ul a.active {
 
         @include mobile {
           width: 100%;
+          padding-inline: 2rem;
         }
 
         h3 {

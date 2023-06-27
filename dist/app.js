@@ -7,17 +7,12 @@ const backToTop = document.querySelector('.back_to_top');
 const dropDown = document.querySelectorAll('.withCaret');
 
 function openCaret(e) {
-  // dropDown.forEach((item) => {
-  //   item.classList.remove('open');
-  // });
-
   e.target.parentElement.classList.toggle('open');
 }
 
 function openMenu() {
   menuBtn.classList.toggle('active');
   menu.classList.toggle('open');
-  // document.querySelector('header').classList.add('active');
 }
 
 menuBtn.addEventListener('click', openMenu);
