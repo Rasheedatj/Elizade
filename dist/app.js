@@ -1,12 +1,23 @@
 const menuBtn = document.querySelector('.menuBtn');
+const menu = document.querySelector('.ham__menu');
 const info = document.querySelector('.info');
 const contact = document.querySelector('.contact');
 const close = document.querySelector('#close-contact-info');
-backToTop = document.querySelector('.back_to_top');
+const backToTop = document.querySelector('.back_to_top');
+const dropDown = document.querySelectorAll('.withCaret');
+
+function openCaret(e) {
+  // dropDown.forEach((item) => {
+  //   item.classList.remove('open');
+  // });
+
+  e.target.parentElement.classList.toggle('open');
+}
 
 function openMenu() {
   menuBtn.classList.toggle('active');
-  document.querySelector('header').classList.add('active');
+  menu.classList.toggle('open');
+  // document.querySelector('header').classList.add('active');
 }
 
 menuBtn.addEventListener('click', openMenu);
@@ -30,6 +41,8 @@ info.addEventListener('click', () => {
 close.addEventListener('click', () => {
   contact.classList.remove('open');
 });
+
+document.addEventListener('click', openCaret);
 
 var swiper = new Swiper('.home-slider', {
   loop: true,
@@ -69,22 +82,3 @@ var swiper = new Swiper('.blog-slider', {
     },
   },
 });
-
-// faculties swiper
-
-// var swiper = new Swiper('.mySwiper', {
-//   effect: 'coverflow',
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: 5,
-//   coverflowEffect: {
-//     rotate: 50,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 1,
-//     slideShadows: true,
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-// });
