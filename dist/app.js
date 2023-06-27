@@ -44,6 +44,32 @@ var swiper = new Swiper('.home-slider', {
   },
 });
 
+var swiper = new Swiper('.blog-slider', {
+  loop: true,
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  grabCursor: true,
+  spaceBetween: 20,
+  breakpoints: {
+    350: {
+      slidesPerView: 1.1,
+    },
+    768: {
+      slidesPerView: 2.1,
+    },
+    1200: {
+      slidesPerView: 3.1,
+    },
+  },
+});
+
 // faculties swiper
 
 // var swiper = new Swiper('.mySwiper', {
