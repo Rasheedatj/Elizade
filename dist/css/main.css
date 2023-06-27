@@ -758,14 +758,13 @@ nav ul a.active {
 }
 .home_body .blog .slide {
   text-align: center;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   margin: 2rem 0;
 }
 .home_body .blog .slide:hover .image img {
   transform: scale(1.1);
 }
 .home_body .blog .slide .image {
-  height: 18rem;
+  height: 16rem;
   width: 90%;
   overflow: hidden;
   margin: 0 auto;
@@ -782,6 +781,7 @@ nav ul a.active {
   padding-top: 5rem;
   background-color: white;
   height: 250px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .home_body .blog .content h3 {
   font-size: 1rem;
@@ -791,7 +791,7 @@ nav ul a.active {
 }
 .home_body .blog .content .date_stamp {
   position: absolute;
-  bottom: 4rem;
+  bottom: 3.3rem;
   display: flex;
   gap: 20px;
   align-items: center;
