@@ -34,7 +34,8 @@ info.addEventListener('click', () => {
 });
 
 close.addEventListener('click', () => {
-  contact.classList.remove('open');
+  contact.classList.add('opener');
+  console.log(contact);
 });
 
 document.addEventListener('click', openCaret);
